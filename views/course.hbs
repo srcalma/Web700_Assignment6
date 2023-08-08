@@ -1,0 +1,28 @@
+<div class="row">
+    <main class="col-md-12">
+        <br>
+        <h2>{{course.courseCode}} - {{course.courseDescription}}</h2>
+        <hr />
+
+        <form method="post" action="/course/update">
+            <input type="hidden" name="courseId" value="{{course.courseId}}" />
+
+            <fieldset>
+                <div class="form-group">
+                    <label for="courseCode">Course Code:</label>
+                    <input class="form-control" type="text" id="courseCode" name="courseCode"
+                        value="{{course.courseCode}}" required />
+                </div>
+                <div class="form-group">
+                    <label for="courseDescription">Course Description:</label>
+                    <input class="form-control" type="text" id="courseDescription" name="courseDescription"
+                        value="{{course.courseDescription}}" required />
+                </div>
+            </fieldset>
+
+            <hr />
+
+            <input type="submit" class="btn btn-primary float-right" value="Update Course" /><br /><br /><br />
+        </form>
+    </main>
+</div>
